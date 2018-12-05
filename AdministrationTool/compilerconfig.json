@@ -1,0 +1,38 @@
+﻿[
+  {
+    "outputFile": "Content/_bootswatch.css",
+    "inputFile": "Content/_bootswatch.scss"
+  },
+  {
+    "outputFile": "Content/_variables.css",
+    "inputFile": "Content/_variables.scss"
+  },
+  {
+    "outputFile": "Content/main.css",
+    "inputFile": "Content/main.scss"
+  },
+  {
+    "outputFile": "Content/Bootstrap/bootswatch-theme.css",
+    "inputFile": "Content/Bootstrap/bootswatch-theme.scss"
+  },
+  {
+    "outputFile": "Content/Bootstrap/bootstrap-grid.css",
+    "inputFile": "Content/Bootstrap/bootstrap-grid.scss"
+  },
+  {
+    "outputFile": "Content/Bootstrap/bootstrap-reboot.css",
+    "inputFile": "Content/Bootstrap/bootstrap-reboot.scss"
+  },
+  {
+    "outputFile": "Content/Bootstrap/bootstrap-theme-slate.css",
+    "inputFile": "Content/Bootstrap/bootstrap-theme-slate.scss"
+  },
+  {
+    "outputFile": "Content/styles/main.css",
+    "inputFile": "Content/styles/main.scss"
+  },
+  {
+    "outputFile": "Assets/Vendors/Dashkit/scss/theme-dark.css",
+    "inputFile": "Assets/Vendors/Dashkit/scss/theme-dark.scss"
+  }
+]

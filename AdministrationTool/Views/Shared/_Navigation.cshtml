@@ -1,0 +1,132 @@
+﻿
+<!-- NAVIGATION
+================================================== -->
+
+<nav class="navbar navbar-vertical fixed-left navbar-expand-md navbar-light" id="sidebar">
+    <div class="container-fluid">
+
+        <!-- Toggler -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidebarCollapse" aria-controls="sidebarCollapse" aria-expanded="false" aria-label="Menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Brand -->
+        <a href="@Url.Action("Index", "Home")" class="mt-md-5 mb-md-5">
+            <img src="~/Assets/Images/logo.png" , alt="f.r.m. m.b. dashboard"/>
+        </a>
+
+        <!-- Utilities (xs) -->
+        <div class="navbar-user d-md-none">
+            @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm"}))
+            {
+                @Html.AntiForgeryToken()
+
+                <!-- Icon -->
+                <a href="javascript:document.getElementById('logoutForm').submit()">
+                    <i class="fe fe-log-out"></i>
+                </a>
+            }
+        </div>
+
+        <!-- Collapse -->
+        <div class="collapse navbar-collapse" id="sidebarCollapse">
+
+            <!-- Divider -->
+            <hr class="navbar-divider my-3">
+
+            <!-- Functionalities Nav -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="@Url.Action("Index", "Data")" class="nav-link">
+                        <i class="fe fe-database"></i>
+                        Data Management
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="@Url.Action("Index", "Reports")" class="nav-link">
+                        <i class="fe fe-trending-up"></i>
+                        Rapportage
+                    </a>
+                </li>
+            </ul>
+        
+
+            <!-- Divider -->
+            <hr class="navbar-divider my-3">
+
+            <!-- Documentation Nav -->
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="#sidebarPolicy" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarPolicy">
+                        <i class="fe fe-shield"></i> Beleid
+                    </a>
+                    <div class="collapse " id="sidebarPolicy">
+                        <ul class="nav nav-sm flex-column">
+                            <li class="nav-item">
+                                <a href="/" class="nav-link">
+                                    SII Delegated Acts
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/" class="nav-link">
+                                    SII Rentebeleid
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="#sidebarDocumentation" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarDocumentation">
+                        <i class="fe fe-file-text"></i> Documentatie
+                    </a>
+                    <div class="collapse " id="sidebarDocumentation">
+                        <ul class="nav nav-sm flex-column">
+                            <li class="nav-item">
+                                <a href="/" class="nav-link">
+                                    Cic Codes
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+
+            <!-- Push content down -->
+            <div class="mt-auto"></div>
+
+            <!-- Utilities (md) -->
+            <div class="navbar-user d-none d-md-flex">
+
+                <!-- Icon -->
+                <a href="/" class="navbar-user-link">
+                    <span class="icon">
+                        <i class="fe fe-maximize-2"></i>
+                    </span>
+                </a>
+                
+                @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm"}))
+                {
+                @Html.AntiForgeryToken()
+
+                    <!-- Icon -->
+                    <a href="javascript:document.getElementById('logoutForm').submit()">
+                        <i class="fe fe-log-out"></i>
+                    </a>
+                }
+                
+                <!-- Icon -->
+                <a href="/" class="navbar-user-link">
+                    <span class="icon">
+                        <i class="fe fe-chevron-left"></i>
+                    </span>
+                </a>
+
+            </div>
+
+
+        </div> <!-- / .navbar-collapse -->
+
+    </div>
+</nav>
+

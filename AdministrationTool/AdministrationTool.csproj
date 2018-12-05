@@ -1,0 +1,1196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{936311D8-2B84-4AF1-9F91-0D8A6F22892B}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ReportingTool</RootNamespace>
+    <AssemblyName>ReportingTool</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>Latest</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TypeScriptTarget>ES5</TypeScriptTarget>
+    <TypeScriptJSXEmit>None</TypeScriptJSXEmit>
+    <TypeScriptModuleKind>None</TypeScriptModuleKind>
+    <TypeScriptCompileOnSaveEnabled>True</TypeScriptCompileOnSaveEnabled>
+    <TypeScriptNoImplicitAny>False</TypeScriptNoImplicitAny>
+    <TypeScriptRemoveComments>False</TypeScriptRemoveComments>
+    <TypeScriptOutFile>Assets/Scripts/JavaScript/Main.js</TypeScriptOutFile>
+    <TypeScriptOutDir />
+    <TypeScriptGeneratesDeclarations>False</TypeScriptGeneratesDeclarations>
+    <TypeScriptNoEmitOnError>True</TypeScriptNoEmitOnError>
+    <TypeScriptSourceMap>True</TypeScriptSourceMap>
+    <TypeScriptMapRoot />
+    <TypeScriptSourceRoot />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.4\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.4\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.2\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.2\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.2\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.4.0.0\lib\net451\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.4.0.0\lib\net451\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.4.0.0\lib\net451\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.4.0.0\lib\net451\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.4.0.0\lib\net451\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.4.0.0\lib\net451\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.4.0.0\lib\net451\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.4.0.0\lib\net451\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.4.0.0\lib\net451\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.DiagnosticSource">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.4.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.TelemetryCorrelation">
+      <HintPath>..\packages\Microsoft.AspNet.TelemetryCorrelation.1.0.0\lib\net45\Microsoft.AspNet.TelemetryCorrelation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.5.1\lib\net46\Microsoft.ApplicationInsights.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.4.0\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.5.1\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.5.1\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.5.1\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.5.1\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.5.1\lib\net45\Microsoft.AI.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ClientController.cs" />
+    <Compile Include="Controllers\DomainController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\HostingController.cs" />
+    <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812040942026_initialModel.cs" />
+    <Compile Include="Migrations\201812040942026_initialModel.Designer.cs">
+      <DependentUpon>201812040942026_initialModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812051946539_AdminModels.cs" />
+    <Compile Include="Migrations\201812051946539_AdminModels.Designer.cs">
+      <DependentUpon>201812051946539_AdminModels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\ApplicationDbContext.cs" />
+    <Compile Include="Models\BillItemModel.cs" />
+    <Compile Include="Models\BillModel.cs" />
+    <Compile Include="Models\ClientModel.cs" />
+    <Compile Include="Models\DomainModel.cs" />
+    <Compile Include="Models\HostingModel.cs" />
+    <Compile Include="Models\ApplicationUser.cs" />
+    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\Images\logo.png" />
+    <Content Include="Assets\Scripts\JavaScript\Main.js" />
+    <Content Include="Assets\Styles\main.css">
+      <DependentUpon>main.scss</DependentUpon>
+    </Content>
+    <Content Include="Assets\Styles\main.min.css">
+      <DependentUpon>main.css</DependentUpon>
+    </Content>
+    <Content Include="Assets\Vendors\Dashkit\fonts\cerebrisans\cerebrisans-bold.svg" />
+    <Content Include="Assets\Vendors\Dashkit\fonts\cerebrisans\cerebrisans-book.svg" />
+    <Content Include="Assets\Vendors\Dashkit\fonts\cerebrisans\cerebrisans-medium.svg" />
+    <Content Include="Assets\Vendors\Dashkit\fonts\cerebrisans\cerebrisans-regular.svg" />
+    <Content Include="Assets\Vendors\Dashkit\fonts\cerebrisans\cerebrisans-semibold.svg" />
+    <Content Include="Assets\Vendors\Dashkit\fonts\feather\feather.css" />
+    <Content Include="Assets\Vendors\Dashkit\fonts\feather\feather.min.css" />
+    <Content Include="Assets\Vendors\Dashkit\fonts\feather\fonts\Feather.svg" />
+    <Content Include="Assets\Vendors\Dashkit\js\theme.min.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\bootstrap\dist\css\bootstrap-grid.min.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\bootstrap\dist\css\bootstrap-reboot.min.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\bootstrap\dist\css\bootstrap.min.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\bootstrap\dist\js\bootstrap.bundle.min.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\bootstrap\dist\js\bootstrap.min.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\chart.js\Chart.extension.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\chart.js\Chart.extension.min.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\chart.js\dist\Chart.bundle.min.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\chart.js\dist\Chart.min.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\dropzone\dist\basic.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\dropzone\dist\dropzone-amd-module.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\dropzone\dist\dropzone.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\dropzone\dist\dropzone.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\dropzone\dist\min\basic.min.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\dropzone\dist\min\dropzone-amd-module.min.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\dropzone\dist\min\dropzone.min.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\dropzone\dist\min\dropzone.min.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\flatpickr\dist\flatpickr.min.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\flatpickr\dist\flatpickr.min.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\flatpickr\dist\ie.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\flatpickr\dist\l10n\ar.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\flatpickr\dist\l10n\at.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\flatpickr\dist\l10n\be.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\flatpickr\dist\l10n\bg.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\flatpickr\dist\l10n\bn.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\flatpickr\dist\l10n\cat.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\flatpickr\dist\l10n\cs.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\flatpickr\dist\l10n\cy.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\flatpickr\dist\l10n\da.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\flatpickr\dist\l10n\de.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\flatpickr\dist\l10n\default.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\flatpickr\dist\l10n\eo.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\flatpickr\dist\l10n\es.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\flatpickr\dist\l10n\et.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\flatpickr\dist\l10n\fa.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\flatpickr\dist\l10n\fi.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\flatpickr\dist\l10n\fr.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\flatpickr\dist\l10n\gr.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\flatpickr\dist\l10n\he.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\flatpickr\dist\l10n\hi.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\flatpickr\dist\l10n\hr.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\flatpickr\dist\l10n\hu.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\flatpickr\dist\l10n\id.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\flatpickr\dist\l10n\index.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\flatpickr\dist\l10n\it.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\flatpickr\dist\l10n\ja.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\flatpickr\dist\l10n\km.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\flatpickr\dist\l10n\ko.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\flatpickr\dist\l10n\kz.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\flatpickr\dist\l10n\lt.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\flatpickr\dist\l10n\lv.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\flatpickr\dist\l10n\mk.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\flatpickr\dist\l10n\mn.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\flatpickr\dist\l10n\ms.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\flatpickr\dist\l10n\my.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\flatpickr\dist\l10n\nl.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\flatpickr\dist\l10n\no.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\flatpickr\dist\l10n\pa.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\flatpickr\dist\l10n\pl.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\flatpickr\dist\l10n\pt.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\flatpickr\dist\l10n\ro.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\flatpickr\dist\l10n\ru.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\flatpickr\dist\l10n\si.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\flatpickr\dist\l10n\sk.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\flatpickr\dist\l10n\sl.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\flatpickr\dist\l10n\sq.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\flatpickr\dist\l10n\sr.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\flatpickr\dist\l10n\sv.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\flatpickr\dist\l10n\th.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\flatpickr\dist\l10n\tr.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\flatpickr\dist\l10n\uk.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\flatpickr\dist\l10n\vn.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\flatpickr\dist\l10n\zh.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\flatpickr\dist\plugins\confirmDate\confirmDate.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\flatpickr\dist\plugins\confirmDate\confirmDate.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\flatpickr\dist\plugins\labelPlugin\labelPlugin.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\flatpickr\dist\plugins\minMaxTimePlugin.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\flatpickr\dist\plugins\monthSelect\monthSelect.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\flatpickr\dist\plugins\monthSelect\monthSelect.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\flatpickr\dist\plugins\rangePlugin.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\flatpickr\dist\plugins\scrollPlugin.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\flatpickr\dist\plugins\weekSelect\weekSelect.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\flatpickr\dist\themes\airbnb.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\flatpickr\dist\themes\confetti.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\flatpickr\dist\themes\dark.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\flatpickr\dist\themes\light.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\flatpickr\dist\themes\material_blue.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\flatpickr\dist\themes\material_green.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\flatpickr\dist\themes\material_orange.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\flatpickr\dist\themes\material_red.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\highlight.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\index.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\1c.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\abnf.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\accesslog.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\actionscript.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\ada.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\apache.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\applescript.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\arduino.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\armasm.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\asciidoc.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\aspectj.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\autohotkey.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\autoit.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\avrasm.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\awk.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\axapta.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\bash.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\basic.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\bnf.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\brainfuck.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\cal.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\capnproto.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\ceylon.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\clean.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\clojure-repl.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\clojure.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\cmake.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\coffeescript.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\coq.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\cos.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\cpp.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\crmsh.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\crystal.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\cs.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\csp.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\css.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\d.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\dart.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\delphi.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\diff.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\django.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\dns.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\dockerfile.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\dos.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\dsconfig.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\dts.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\dust.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\ebnf.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\elixir.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\elm.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\erb.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\erlang-repl.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\erlang.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\excel.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\fix.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\flix.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\fortran.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\fsharp.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\gams.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\gauss.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\gcode.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\gherkin.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\glsl.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\go.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\golo.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\gradle.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\groovy.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\haml.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\handlebars.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\haskell.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\haxe.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\hsp.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\htmlbars.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\http.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\hy.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\inform7.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\ini.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\irpf90.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\java.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\javascript.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\jboss-cli.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\json.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\julia-repl.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\julia.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\kotlin.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\lasso.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\ldif.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\leaf.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\less.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\lisp.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\livecodeserver.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\livescript.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\llvm.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\lsl.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\lua.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\makefile.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\markdown.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\mathematica.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\matlab.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\maxima.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\mel.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\mercury.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\mipsasm.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\mizar.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\mojolicious.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\monkey.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\moonscript.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\n1ql.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\nginx.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\nimrod.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\nix.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\nsis.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\objectivec.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\ocaml.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\openscad.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\oxygene.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\parser3.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\perl.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\pf.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\php.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\pony.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\powershell.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\processing.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\profile.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\prolog.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\protobuf.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\puppet.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\purebasic.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\python.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\q.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\qml.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\r.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\rib.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\roboconf.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\routeros.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\rsl.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\ruby.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\ruleslanguage.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\rust.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\scala.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\scheme.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\scilab.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\scss.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\shell.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\smali.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\smalltalk.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\sml.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\sqf.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\sql.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\stan.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\stata.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\step21.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\stylus.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\subunit.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\swift.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\taggerscript.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\tap.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\tcl.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\tex.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\thrift.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\tp.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\twig.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\typescript.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\vala.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\vbnet.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\vbscript-html.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\vbscript.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\verilog.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\vhdl.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\vim.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\x86asm.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\xl.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\xml.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\xquery.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\yaml.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\lib\languages\zephir.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\agate.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\androidstudio.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\arduino-light.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\arta.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\ascetic.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\atelier-cave-dark.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\atelier-cave-light.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\atelier-dune-dark.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\atelier-dune-light.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\atelier-estuary-dark.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\atelier-estuary-light.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\atelier-forest-dark.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\atelier-forest-light.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\atelier-heath-dark.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\atelier-heath-light.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\atelier-lakeside-dark.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\atelier-lakeside-light.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\atelier-plateau-dark.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\atelier-plateau-light.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\atelier-savanna-dark.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\atelier-savanna-light.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\atelier-seaside-dark.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\atelier-seaside-light.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\atelier-sulphurpool-dark.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\atelier-sulphurpool-light.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\atom-one-dark.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\atom-one-light.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\brown-paper.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\brown-papersq.png" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\codepen-embed.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\color-brewer.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\darcula.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\dark.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\darkula.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\default.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\docco.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\dracula.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\far.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\foundation.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\github-gist.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\github.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\googlecode.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\grayscale.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\gruvbox-dark.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\gruvbox-light.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\hopscotch.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\hybrid.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\idea.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\ir-black.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\kimbie.dark.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\kimbie.light.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\magula.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\mono-blue.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\monokai-sublime.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\monokai.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\obsidian.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\ocean.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\paraiso-dark.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\paraiso-light.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\pojoaque.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\pojoaque.jpg" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\purebasic.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\qtcreator_dark.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\qtcreator_light.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\railscasts.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\rainbow.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\routeros.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\school-book.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\school-book.png" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\solarized-dark.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\solarized-light.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\sunburst.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\tomorrow-night-blue.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\tomorrow-night-bright.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\tomorrow-night-eighties.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\tomorrow-night.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\tomorrow.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\vs.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\vs2015.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\xcode.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\xt256.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlight.js\styles\zenburn.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\highlight.pack.min.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\agate.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\androidstudio.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\arduino-light.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\arta.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\ascetic.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\atelier-cave-dark.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\atelier-cave-light.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\atelier-cave.dark.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\atelier-cave.light.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\atelier-dune-dark.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\atelier-dune-light.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\atelier-dune.dark.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\atelier-dune.light.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\atelier-estuary-dark.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\atelier-estuary-light.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\atelier-estuary.dark.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\atelier-estuary.light.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\atelier-forest-dark.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\atelier-forest-light.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\atelier-forest.dark.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\atelier-forest.light.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\atelier-heath-dark.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\atelier-heath-light.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\atelier-heath.dark.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\atelier-heath.light.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\atelier-lakeside-dark.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\atelier-lakeside-light.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\atelier-lakeside.dark.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\atelier-lakeside.light.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\atelier-plateau-dark.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\atelier-plateau-light.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\atelier-plateau.dark.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\atelier-plateau.light.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\atelier-savanna-dark.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\atelier-savanna-light.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\atelier-savanna.dark.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\atelier-savanna.light.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\atelier-seaside-dark.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\atelier-seaside-light.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\atelier-seaside.dark.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\atelier-seaside.light.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\atelier-sulphurpool-dark.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\atelier-sulphurpool-light.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\atelier-sulphurpool.dark.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\atelier-sulphurpool.light.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\atom-one-dark.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\atom-one-light.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\brown-paper.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\brown-papersq.png" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\brown_paper.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\brown_papersq.png" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\codepen-embed.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\color-brewer.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\darcula.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\dark.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\darkula.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\default.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\docco.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\dracula.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\far.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\foundation.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\github-gist.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\github.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\googlecode.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\grayscale.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\gruvbox-dark.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\gruvbox-light.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\hopscotch.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\hybrid.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\idea.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\ir-black.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\ir_black.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\kimbie.dark.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\kimbie.light.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\magula.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\mono-blue.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\monokai-sublime.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\monokai.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\monokai_sublime.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\obsidian.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\ocean.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\paraiso-dark.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\paraiso-light.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\paraiso.dark.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\paraiso.light.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\pojoaque.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\pojoaque.jpg" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\purebasic.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\qtcreator_dark.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\qtcreator_light.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\railscasts.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\rainbow.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\school-book.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\school-book.png" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\school_book.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\school_book.png" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\solarized-dark.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\solarized-light.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\solarized_dark.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\solarized_light.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\sunburst.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\tomorrow-night-blue.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\tomorrow-night-bright.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\tomorrow-night-eighties.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\tomorrow-night.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\tomorrow.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\vs.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\xcode.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\xt256.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\styles\zenburn.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\jquery-mask-plugin\dist\jquery.mask.min.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\jquery\dist\core.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\jquery\dist\jquery.min.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\jquery\dist\jquery.slim.min.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\list.js\dist\list.min.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\quill\dist\quill.bubble.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\quill\dist\quill.core.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\quill\dist\quill.core.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\quill\dist\quill.min.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\quill\dist\quill.snow.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\lib\memory-engine.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\lib\save.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\all.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\allLimit.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\allSeries.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\any.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\anyLimit.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\anySeries.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\apply.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\applyEach.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\applyEachSeries.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\asyncify.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\auto.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\autoInject.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\cargo.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\compose.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\concat.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\concatLimit.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\concatSeries.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\constant.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\detect.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\detectLimit.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\detectSeries.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\dir.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\dist\async.min.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\doDuring.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\doUntil.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\doWhilst.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\during.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\each.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\eachLimit.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\eachOf.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\eachOfLimit.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\eachOfSeries.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\eachSeries.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\ensureAsync.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\every.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\everyLimit.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\everySeries.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\filter.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\filterLimit.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\filterSeries.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\find.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\findLimit.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\findSeries.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\foldl.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\foldr.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\forEach.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\forEachLimit.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\forEachOf.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\forEachOfLimit.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\forEachOfSeries.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\forEachSeries.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\forever.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\groupBy.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\groupByLimit.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\groupBySeries.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\index.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\inject.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\internal\applyEach.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\internal\breakLoop.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\internal\consoleFunc.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\internal\createTester.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\internal\doLimit.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\internal\doParallel.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\internal\doParallelLimit.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\internal\DoublyLinkedList.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\internal\eachOfLimit.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\internal\filter.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\internal\findGetResult.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\internal\getIterator.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\internal\initialParams.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\internal\iterator.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\internal\map.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\internal\notId.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\internal\once.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\internal\onlyOnce.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\internal\parallel.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\internal\queue.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\internal\reject.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\internal\setImmediate.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\internal\slice.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\internal\withoutIndex.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\internal\wrapAsync.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\log.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\map.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\mapLimit.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\mapSeries.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\mapValues.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\mapValuesLimit.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\mapValuesSeries.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\memoize.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\nextTick.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\parallel.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\parallelLimit.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\priorityQueue.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\queue.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\race.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\reduce.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\reduceRight.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\reflect.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\reflectAll.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\reject.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\rejectLimit.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\rejectSeries.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\retry.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\retryable.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\select.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\selectLimit.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\selectSeries.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\seq.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\series.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\setImmediate.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\some.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\someLimit.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\someSeries.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\sortBy.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\timeout.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\times.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\timesLimit.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\timesSeries.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\transform.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\tryEach.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\unmemoize.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\until.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\waterfall.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\whilst.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\save\node_modules\async\wrapSync.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\select2\dist\css\select2.min.css" />
+    <Content Include="Assets\Vendors\Dashkit\libs\select2\dist\js\i18n\af.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\select2\dist\js\i18n\ar.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\select2\dist\js\i18n\az.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\select2\dist\js\i18n\bg.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\select2\dist\js\i18n\bs.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\select2\dist\js\i18n\build.txt" />
+    <Content Include="Assets\Vendors\Dashkit\libs\select2\dist\js\i18n\ca.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\select2\dist\js\i18n\cs.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\select2\dist\js\i18n\da.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\select2\dist\js\i18n\de.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\select2\dist\js\i18n\dsb.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\select2\dist\js\i18n\el.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\select2\dist\js\i18n\en.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\select2\dist\js\i18n\es.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\select2\dist\js\i18n\et.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\select2\dist\js\i18n\eu.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\select2\dist\js\i18n\fa.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\select2\dist\js\i18n\fi.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\select2\dist\js\i18n\fr.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\select2\dist\js\i18n\gl.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\select2\dist\js\i18n\he.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\select2\dist\js\i18n\hi.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\select2\dist\js\i18n\hr.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\select2\dist\js\i18n\hsb.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\select2\dist\js\i18n\hu.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\select2\dist\js\i18n\hy.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\select2\dist\js\i18n\id.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\select2\dist\js\i18n\is.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\select2\dist\js\i18n\it.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\select2\dist\js\i18n\ja.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\select2\dist\js\i18n\km.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\select2\dist\js\i18n\ko.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\select2\dist\js\i18n\lt.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\select2\dist\js\i18n\lv.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\select2\dist\js\i18n\mk.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\select2\dist\js\i18n\ms.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\select2\dist\js\i18n\nb.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\select2\dist\js\i18n\nl.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\select2\dist\js\i18n\pl.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\select2\dist\js\i18n\ps.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\select2\dist\js\i18n\pt-BR.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\select2\dist\js\i18n\pt.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\select2\dist\js\i18n\ro.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\select2\dist\js\i18n\ru.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\select2\dist\js\i18n\sk.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\select2\dist\js\i18n\sl.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\select2\dist\js\i18n\sr-Cyrl.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\select2\dist\js\i18n\sr.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\select2\dist\js\i18n\sv.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\select2\dist\js\i18n\th.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\select2\dist\js\i18n\tk.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\select2\dist\js\i18n\tr.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\select2\dist\js\i18n\uk.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\select2\dist\js\i18n\vi.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\select2\dist\js\i18n\zh-CN.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\select2\dist\js\i18n\zh-TW.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\select2\dist\js\select2.full.min.js" />
+    <Content Include="Assets\Vendors\Dashkit\libs\select2\dist\js\select2.min.js" />
+    <Content Include="Assets\Vendors\Dashkit\scss\theme-dark.css">
+      <DependentUpon>theme-dark.scss</DependentUpon>
+    </Content>
+    <Content Include="Assets\Vendors\Dashkit\scss\theme-dark.min.css">
+      <DependentUpon>theme-dark.css</DependentUpon>
+    </Content>
+    <Content Include="favicon.ico" />
+    <Content Include="Assets\Fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Scripts\JavaScript\Main.js.map" />
+    <Content Include="Assets\Vendors\Dashkit\scss\dashkit\dark\_overrides-dark.scss" />
+    <Content Include="Assets\Vendors\Dashkit\scss\dashkit\dark\_variables-dark.scss" />
+    <Content Include="Assets\Vendors\Dashkit\scss\dashkit\mixins\_badge.scss" />
+    <Content Include="Assets\Vendors\Dashkit\scss\dashkit\utilities\_background.scss" />
+    <Content Include="Assets\Vendors\Dashkit\scss\dashkit\utilities\_borders.scss" />
+    <Content Include="Assets\Vendors\Dashkit\scss\dashkit\utilities\_sizing.scss" />
+    <Content Include="Assets\Vendors\Dashkit\scss\dashkit\vendors\_dropzone.scss" />
+    <Content Include="Assets\Vendors\Dashkit\scss\dashkit\vendors\_flatpickr.scss" />
+    <Content Include="Assets\Vendors\Dashkit\scss\dashkit\vendors\_quill.scss" />
+    <Content Include="Assets\Vendors\Dashkit\scss\dashkit\vendors\_select2.scss" />
+    <Content Include="Assets\Vendors\Dashkit\scss\dashkit\_alert.scss" />
+    <Content Include="Assets\Vendors\Dashkit\scss\dashkit\_avatar.scss" />
+    <Content Include="Assets\Vendors\Dashkit\scss\dashkit\_badge.scss" />
+    <Content Include="Assets\Vendors\Dashkit\scss\dashkit\_breadcrumb.scss" />
+    <Content Include="Assets\Vendors\Dashkit\scss\dashkit\_buttons.scss" />
+    <Content Include="Assets\Vendors\Dashkit\scss\dashkit\_card.scss" />
+    <Content Include="Assets\Vendors\Dashkit\scss\dashkit\_chart.scss" />
+    <Content Include="Assets\Vendors\Dashkit\scss\dashkit\_code.scss" />
+    <Content Include="Assets\Vendors\Dashkit\scss\dashkit\_comment.scss" />
+    <Content Include="Assets\Vendors\Dashkit\scss\dashkit\_dashkit.scss" />
+    <Content Include="Assets\Vendors\Dashkit\scss\dashkit\_dropdowns.scss" />
+    <Content Include="Assets\Vendors\Dashkit\scss\dashkit\_forms.scss" />
+    <Content Include="Assets\Vendors\Dashkit\scss\dashkit\_header.scss" />
+    <Content Include="Assets\Vendors\Dashkit\scss\dashkit\_icon.scss" />
+    <Content Include="Assets\Vendors\Dashkit\scss\dashkit\_jumbotron.scss" />
+    <Content Include="Assets\Vendors\Dashkit\scss\dashkit\_list-group.scss" />
+    <Content Include="Assets\Vendors\Dashkit\scss\dashkit\_loader.scss" />
+    <Content Include="Assets\Vendors\Dashkit\scss\dashkit\_main-content.scss" />
+    <Content Include="Assets\Vendors\Dashkit\scss\dashkit\_mixins.scss" />
+    <Content Include="Assets\Vendors\Dashkit\scss\dashkit\_modal.scss" />
+    <Content Include="Assets\Vendors\Dashkit\scss\dashkit\_nav.scss" />
+    <Content Include="Assets\Vendors\Dashkit\scss\dashkit\_navbar.scss" />
+    <Content Include="Assets\Vendors\Dashkit\scss\dashkit\_popover.scss" />
+    <Content Include="Assets\Vendors\Dashkit\scss\dashkit\_progress.scss" />
+    <Content Include="Assets\Vendors\Dashkit\scss\dashkit\_root.scss" />
+    <Content Include="Assets\Vendors\Dashkit\scss\dashkit\_tables.scss" />
+    <Content Include="Assets\Vendors\Dashkit\scss\dashkit\_toggle.scss" />
+    <Content Include="Assets\Vendors\Dashkit\scss\dashkit\_type.scss" />
+    <Content Include="Assets\Vendors\Dashkit\scss\dashkit\_utilities.scss" />
+    <Content Include="Assets\Vendors\Dashkit\scss\dashkit\_variables.scss" />
+    <Content Include="Assets\Vendors\Dashkit\scss\dashkit\_vendors.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\bootstrap-grid.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\bootstrap-reboot.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\bootstrap.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\mixins\_alert.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\mixins\_background-variant.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\mixins\_badge.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\mixins\_border-radius.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\mixins\_box-shadow.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\mixins\_breakpoints.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\mixins\_buttons.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\mixins\_caret.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\mixins\_clearfix.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\mixins\_float.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\mixins\_forms.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\mixins\_gradients.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\mixins\_grid-framework.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\mixins\_grid.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\mixins\_hover.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\mixins\_image.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\mixins\_list-group.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\mixins\_lists.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\mixins\_nav-divider.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\mixins\_pagination.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\mixins\_reset-text.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\mixins\_resize.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\mixins\_screen-reader.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\mixins\_size.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\mixins\_table-row.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\mixins\_text-emphasis.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\mixins\_text-hide.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\mixins\_text-truncate.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\mixins\_transition.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\mixins\_visibility.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\utilities\_align.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\utilities\_background.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\utilities\_borders.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\utilities\_clearfix.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\utilities\_display.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\utilities\_embed.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\utilities\_flex.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\utilities\_float.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\utilities\_position.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\utilities\_screenreaders.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\utilities\_shadows.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\utilities\_sizing.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\utilities\_spacing.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\utilities\_text.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\utilities\_visibility.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\_alert.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\_badge.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\_breadcrumb.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\_button-group.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\_buttons.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\_card.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\_carousel.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\_close.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\_code.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\_custom-forms.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\_dropdown.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\_forms.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\_functions.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\_grid.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\_images.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\_input-group.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\_jumbotron.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\_list-group.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\_media.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\_mixins.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\_modal.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\_nav.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\_navbar.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\_pagination.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\_popover.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\_print.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\_progress.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\_reboot.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\_root.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\_tables.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\_tooltip.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\_transitions.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\_type.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\_utilities.scss" />
+    <Content Include="Assets\Vendors\Bootstrap\_variables.scss" />
+    <Content Include="Assets\Vendors\Dashkit\scss\theme-dark.scss" />
+    <Content Include="Assets\Vendors\Dashkit\scss\theme.scss" />
+    <Content Include="Assets\Vendors\Dashkit\scss\_user-variables.scss" />
+    <Content Include="Assets\Vendors\Dashkit\scss\_user.scss" />
+    <None Include="compilerconfig.json" />
+    <None Include="compilerconfig.json.defaults">
+      <DependentUpon>compilerconfig.json</DependentUpon>
+    </None>
+    <Content Include="Assets\Styles\main.scss" />
+    <Content Include="Assets\Styles\abstracts\_variables.scss" />
+    <Content Include="Assets\Styles\base\_animations.scss" />
+    <Content Include="Assets\Styles\abstracts\_mixins.scss" />
+    <Content Include="Assets\Styles\base\_global.scss" />
+    <Content Include="Assets\Styles\layout\navigation.scss" />
+    <Content Include="Assets\Vendors\Dashkit\fonts\cerebrisans\cerebrisans-bold.eot" />
+    <Content Include="Assets\Vendors\Dashkit\fonts\cerebrisans\cerebrisans-bold.ttf" />
+    <Content Include="Assets\Vendors\Dashkit\fonts\cerebrisans\cerebrisans-bold.woff" />
+    <Content Include="Assets\Vendors\Dashkit\fonts\cerebrisans\cerebrisans-book.eot" />
+    <Content Include="Assets\Vendors\Dashkit\fonts\cerebrisans\cerebrisans-book.ttf" />
+    <Content Include="Assets\Vendors\Dashkit\fonts\cerebrisans\cerebrisans-book.woff" />
+    <Content Include="Assets\Vendors\Dashkit\fonts\cerebrisans\cerebrisans-medium.eot" />
+    <Content Include="Assets\Vendors\Dashkit\fonts\cerebrisans\cerebrisans-medium.ttf" />
+    <Content Include="Assets\Vendors\Dashkit\fonts\cerebrisans\cerebrisans-medium.woff" />
+    <Content Include="Assets\Vendors\Dashkit\fonts\cerebrisans\cerebrisans-regular.eot" />
+    <Content Include="Assets\Vendors\Dashkit\fonts\cerebrisans\cerebrisans-regular.ttf" />
+    <Content Include="Assets\Vendors\Dashkit\fonts\cerebrisans\cerebrisans-regular.woff" />
+    <Content Include="Assets\Vendors\Dashkit\fonts\cerebrisans\cerebrisans-semibold.eot" />
+    <Content Include="Assets\Vendors\Dashkit\fonts\cerebrisans\cerebrisans-semibold.ttf" />
+    <Content Include="Assets\Vendors\Dashkit\fonts\cerebrisans\cerebrisans-semibold.woff" />
+    <Content Include="Assets\Vendors\Dashkit\fonts\feather\fonts\Feather.ttf" />
+    <Content Include="Assets\Vendors\Dashkit\fonts\feather\fonts\Feather.woff" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\component.json" />
+    <Content Include="Assets\Vendors\Dashkit\libs\highlightjs\Makefile" />
+    <Content Include="Assets\Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Account\ConfirmEmail.cshtml" />
+    <Content Include="Views\Account\ForgotPassword.cshtml" />
+    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ResetPassword.cshtml" />
+    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\SendCode.cshtml" />
+    <Content Include="Views\Account\VerifyCode.cshtml" />
+    <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
+    <Content Include="Views\Manage\ChangePassword.cshtml" />
+    <Content Include="Views\Manage\Index.cshtml" />
+    <Content Include="Views\Manage\ManageLogins.cshtml" />
+    <Content Include="Views\Manage\SetPassword.cshtml" />
+    <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
+    <Content Include="Views\Shared\Lockout.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Shared\_Navigation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Assets\Styles\component\" />
+    <Folder Include="Assets\Styles\pages\" />
+    <Folder Include="Assets\Vendors\Dashkit\libs\flatpickr\dist\types\" />
+    <Folder Include="Assets\Vendors\Dashkit\libs\flatpickr\dist\utils\" />
+    <Folder Include="Services\" />
+    <Folder Include="ViewModels\" />
+    <Folder Include="Views\Client\" />
+    <Folder Include="Views\Domain\" />
+    <Folder Include="Views\Hosting\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\Fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Assets\Fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Assets\Fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Assets\Fonts\glyphicons-halflings-regular.eot" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Assets\Scripts\TypeScript\Main.ts" />
+    <TypeScriptCompile Include="Assets\Scripts\TypeScript\MyClass.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201812040942026_initialModel.resx">
+      <DependentUpon>201812040942026_initialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812051946539_AdminModels.resx">
+      <DependentUpon>201812051946539_AdminModels.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>38425</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:38425/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

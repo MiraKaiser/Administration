@@ -1,0 +1,33 @@
+﻿@charset 'utf-8';
+
+
+// Abstracts
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+
+// Vendors
+//@import 'vendors/bootstrap/bootstrap';
+
+
+// Base
+@import 'base/global';
+@import 'base/animations';
+
+
+
+// Layout
+@import 'layout/navigation';
+/*@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/sidebar';
+@import 'layout/forms';*/
+
+
+// Components
+/*@import 'components/buttons';*/
+
+
+// Pages
+/*@import 'pages/home';
+@import 'pages/contact';*/
